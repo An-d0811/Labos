@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: gray;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "side-nav main-content"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    height: 100vh;
+    background-color: gray;
+    gap: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: #ff8000;
+    padding: 20px;
+    color: black;
+}
+
+header nav {
+    background-color: yellow;
+    height: 35px;
+    overflow: hidden;
+}
+
+.side-nav {
+    grid-area: side-nav;
+    background-color: yellow;
+    padding: 20px;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background-color: cyan;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #000;
+}
+
+article h2 {
+    margin-bottom: 20px;
+}
+
+article section {
+    background-color: orange;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.article1 .content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.article1 .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article2 section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article2 section aside {
+    width: 30%;
+    background: green;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article1 aside {
+    background: green;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    grid-area: footer;
+    background-color: orange;
+    padding: 20px;
+    color: black;
+}
+
+footer nav {
+    background-color: yellow;
+    height: 30px;
+    overflow: hidden;
+}
+
+header nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+.side-nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+footer nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    float: left;
+}
